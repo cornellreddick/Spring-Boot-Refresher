@@ -4,8 +4,8 @@ import java.util.UUID;
 
 public class Student {
     private final UUID id;
-    private String firstName;
-    private String lastName;
+    private final String firstName;
+    private final String lastName;
     private final String course;
     private final Integer age;
 
@@ -29,16 +29,8 @@ public class Student {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getCourse() {
