@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.UUID;
 
 public class Student {
-    private final UUID id;
+    private UUID id;
     private final String firstName;
     private final String lastName;
     private final String course;
@@ -26,6 +26,10 @@ public class Student {
 
     public UUID getId() {
         return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public String getFirstName() {
