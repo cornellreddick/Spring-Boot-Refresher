@@ -1,5 +1,7 @@
 package com.springboottrn.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.UUID;
 
 public class Student {
@@ -9,11 +11,12 @@ public class Student {
     private final String course;
     private final Integer age;
 
-    public Student(UUID id,
-                   String firstName,
-                   String lastName,
-                   String course,
-                   Integer age) {
+    public Student(
+            @JsonProperty("id") UUID id,
+            @JsonProperty("firstName") String firstName,
+            @JsonProperty("lastName") String lastName,
+            @JsonProperty("course") String course,
+            @JsonProperty("age") Integer age) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
