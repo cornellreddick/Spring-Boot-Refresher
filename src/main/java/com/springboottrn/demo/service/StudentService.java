@@ -2,6 +2,8 @@ package com.springboottrn.demo.service;
 
 import com.springboottrn.demo.dao.StudentDao;
 import com.springboottrn.demo.model.Student;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.util.List;
 import java.util.UUID;
@@ -10,7 +12,8 @@ public class StudentService {
 
     private final StudentDao studentDao;
 
-    public StudentService(StudentDao studentDao) {
+    @Autowired
+    public StudentService(@Qualifier("fakeDao") StudentDao studentDao) {
         this.studentDao = studentDao;
     }
 

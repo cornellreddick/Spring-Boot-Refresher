@@ -1,14 +1,16 @@
 package com.springboottrn.demo.dao;
 
 import com.springboottrn.demo.model.Student;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository("fakeDao")
 public class FakeStudentDaoImpl implements StudentDao {
 
     //Fake Database
     private final Map<UUID, Student> database;
-
 
     public FakeStudentDaoImpl() {
         database = new HashMap<>();
